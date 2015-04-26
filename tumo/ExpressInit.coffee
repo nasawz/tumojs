@@ -1,7 +1,7 @@
 http = require('http')
 path = require('path')
 config = require('./../config')
-rainbow = require('./rainbow')
+rainbow = require('./Rainbow')
 express = require('express')
 
 module.exports = (app) ->
