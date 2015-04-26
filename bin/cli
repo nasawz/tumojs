@@ -2,11 +2,11 @@
 require('coffee-script/register')
 var program = require('commander');
 var libInfo = require('../package');
-var updateCLI = require('./tumo')
+var updateCLI = require('./tumo');
 
 
 program
-    .version(libInfo.version)
+    .version(libInfo.version);
 
 
 program
