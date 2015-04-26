@@ -4,7 +4,45 @@ path = require('path')
 
 tumo =
   create: ->
-    console.log util.inspect({act:'crate'},colors:true)
+    cliPath = path.resolve('.')
+    folders = [
+      'assets'
+      'controllers'
+      'filters'
+      'server'
+      'services'
+      'tumo'
+      'views'
+      'config.coffee'
+      'filters.config.coffee'
+      'index.coffee'
+      'server.js'
+    ]
+    folders.forEach (folder) ->
+      _path = path.join(__dirname, '..', folder)
+      targetPath = path.join(cliPath, folder)
+      if fse.existsSync(_path)
+        #copy整个目录过去
+        fse.copy _path, targetPath, (e) ->
+          if e
+            console.log 'copy file error:' + e.message
+          return
+      return
+    #copy package.json
+    _path = path.join(__dirname, '..', 'templates/package.json')
+    targetPath = path.join(cliPath, 'package.json')
+    fse.copy _path, targetPath, (e) ->
+      if e
+        console.log 'copy file error:' + e
+      return
+    #copy readme.json
+    _path = path.join(__dirname, '..', 'templates/README.md')
+    targetPath = path.join(cliPath, 'README.md')
+    fse.copy _path, targetPath, (e) ->
+      if e
+        console.log 'copy file error:' + e
+      return
+    console.log 'create success!'
 
   createController: (name, xpath)->
     cliPath = path.resolve('.')

@@ -8,6 +8,14 @@ var updateCLI = require('./tumo')
 program
     .version(libInfo.version)
 
+
+program
+    .command('create')
+    .description('create a project')
+    .action(function(options) {
+        updateCLI.create(options)
+    });
+
 program
     .command('controller')
     .option('-n, --name', 'controller name')
