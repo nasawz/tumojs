@@ -1,0 +1,25 @@
+{
+  "name": "TumoApp",
+  "version": "1.0.0",
+  "description": "tumo app",
+  "main": "server.js",
+  "repository": {},
+  "keywords": [
+  ],
+  "author": "nasa.wang",
+  "dependencies": {
+    "coffee-script": "^1.9.2",
+    "compression": "^1.4.3",
+    "ejs": "^2.3.1",
+    "express": "4.12.3",
+    "express-session": "^1.11.1",
+    "glob": "^5.0.5",
+    "loopback": "^2.17.0",
+    "loopback-boot": "^2.7.1",
+    "loopback-datasource-juggler": "^2.26.3",
+    "methods": "^1.1.1"
+  },
+  "optionalDependencies": {
+    "loopback-explorer": "^1.1.0"
+  }
+}
