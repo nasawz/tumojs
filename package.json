@@ -2,9 +2,9 @@
   "name": "tumojs",
   "version": "1.0.0",
   "description": "js cv framework",
-  "main": "index.js",
-  "scripts": {
-    "test": "null"
+  "main": "server.js",
+  "bin": {
+    "tumo": "./bin/cli"
   },
   "repository": {
     "type": "git",

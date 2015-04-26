@@ -2,6 +2,7 @@
   "name": "TumoApp",
   "version": "1.0.0",
   "description": "tumo app",
+  "main": "server.js",
   "repository": {},
   "keywords": [
   ],
