@@ -1,5 +1,6 @@
 config =
-  run_port: 8080
+  port: 8080
+  restApiRoot: '/api'
   base_path: __dirname
   script_ext: '.coffee'
   assets_head: '/assets'

@@ -1,8 +1,11 @@
 #框架主脚本
 require './tumo/BaseInit'
-#初始化express
-express = require('express')
-config = require('./config')
-module.exports = app = express()
+loopback = require('loopback');
+
+module.exports = app = loopback()
+boot = require('loopback-boot')
+boot app,__dirname+'/server'
+
+
 ExpressInit = require('./tumo/ExpressInit')
 ExpressInit app

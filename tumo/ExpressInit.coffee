@@ -5,16 +5,12 @@ rainbow = require('./Rainbow')
 express = require('express')
 
 module.exports = (app) ->
-  app.set 'port', config.run_port
+  app.set 'port', config.port
+  app.set 'restApiRoot', config.restApiRoot
   #模板所在路径
   app.engine '.html', require('ejs').renderFile
   app.set 'view engine', 'html'
-  app.use express.favicon()
   app.use '/assets', express['static'](config.base_path + '/assets')
-  app.use express.bodyParser()
-  app.use express.cookieParser()
-  app.use express.cookieSession(secret: config.session_secret)
-  app.use express.methodOverride()
   #rainbow配置
   rainbow.route app, config.rainbow
   #404处理
