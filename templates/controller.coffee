@@ -1,5 +1,5 @@
 # 加载需要用到的service
-# func_{{name}} = loadService('{{name}}');
+#func_{{name}} = loadService('{{name}}');
 module.exports =
   '/':
     get: ->
