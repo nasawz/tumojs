@@ -1,6 +1,7 @@
 util = require('util')
 fse = require('fs-extra')
 path = require('path')
+shellby = require('shellby')
 
 tumo =
   create: ->
@@ -42,7 +43,10 @@ tumo =
       if e
         console.log 'copy file error:' + e
       return
-    console.log 'create success!'
+    console.log 'do npm install'
+    shellby.exec 'npm install', (err) ->
+      console.log 'create success!'
+
 
   createController: (name, xpath)->
     cliPath = path.resolve('.')
